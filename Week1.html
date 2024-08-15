@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <script src="https://d3js.org/d3.v7.min.js">
+</script>
+</head>
+
+<body>
+    Welcome
+    <div class = "div1">
+    <p> I Visualization </p>
+    <script>
+    function func1(){
+        d3.select(".div1")
+        .select("p")
+        .style("color", "purple")
+    }
+    var canva1 = d3.selectAll("div.div1")
+    .append('svg')
+    .attr("width", 600)
+    .attr("height", 200)
+
+    canva1.selectAll('circle')
+    .data([100,200,300])
+    .join('circle')
+    .attr('r', 10)
+    .attr('cx', function(d,i) {return d+i*20;})
+    .attr('cy', 50)
+    console.log(canva1)
+    </script>
+    </div>
+    <button type = "button", onclick = "func1()">
+    Visual 1
+    </button>  </body> </html>
